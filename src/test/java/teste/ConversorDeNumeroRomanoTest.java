@@ -29,7 +29,7 @@ public class ConversorDeNumeroRomanoTest {
     }
     
     @Test 
-    public void deveEntenderOSimboloII(){
+    public void deveEntenderDoisSimbolosComoII(){
         ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
         int numero = romano.converte("II");
         assertEquals(2, numero);
