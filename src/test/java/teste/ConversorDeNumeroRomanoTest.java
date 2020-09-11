@@ -27,4 +27,11 @@ public class ConversorDeNumeroRomanoTest {
         int numero = romano.converte("V");
         assertEquals(5, numero);
     }
+    
+    @Test 
+    public void deveEntenderOSimboloII(){
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+        int numero = romano.converte("II");
+        assertEquals(2, numero);
+    }
 }
