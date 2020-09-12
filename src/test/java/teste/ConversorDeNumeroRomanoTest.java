@@ -38,4 +38,12 @@ public class ConversorDeNumeroRomanoTest {
         int numero = romano.converte("XXII");
         assertEquals(22, numero);
     }
+    
+    @Test
+    public void deveEntenderNumerosComoIX(){
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+        int numero = romano.converte("IX");
+        assertEquals(9, numero);
+    }
+    
 }
