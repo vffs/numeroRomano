@@ -23,10 +23,22 @@ public class ConversorDeNumeroRomano {
     };
 
 
-    public int converte(String numeroERomano) {
+    public int converte(String numeroEmRomano) {
         int acumulador = 0;
-        for(int i = 0; i<numeroERomano.length();i++){
-            acumulador += tabela.get(numeroERomano.charAt(i));
+        int ultimoVisinhoDaDireita = 0;
+        
+        for(int i = numeroEmRomano.length() - 1; i >= 0 ; i--){
+            int atual = tabela.get(numeroEmRomano.charAt(i));
+            
+            int multiplicador = 1;
+            
+            if(atual < ultimoVisinhoDaDireita) {
+                multiplicador = -1;
+            }
+            
+            acumulador += atual * multiplicador;
+            
+            ultimoVisinhoDaDireita = atual;
         }
         return acumulador;
         
