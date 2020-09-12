@@ -1,8 +1,5 @@
 package teste;
 
-
-
-
 import numeroRomanos.ConversorDeNumeroRomano;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -33,5 +30,12 @@ public class ConversorDeNumeroRomanoTest {
         ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
         int numero = romano.converte("II");
         assertEquals(2, numero);
+    }
+    
+    @Test
+    public void deveEntenderQuatroSimboloDoisADoisComoXXII(){
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+        int numero = romano.converte("XXII");
+        assertEquals(22, numero);
     }
 }
